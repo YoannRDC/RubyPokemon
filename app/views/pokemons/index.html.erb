@@ -1,0 +1,20 @@
+<h1>Pokemons</h1>
+
+<h1>Pokemon name:</h1> 
+<% @pokemons.each do |poke| %>
+  <ul> 
+    <li> <%= poke.id %></li>
+    <li> <%= poke.name %></li>
+    <li> <%= poke.height %></li>
+    <li> <%= poke.weight %></li>
+    <li> <%= image_tag(poke.image_front, draggable: "true", id: "drag1") %></li>
+    <li> <%= image_tag(poke.image_back, draggable: "true", id: "drag2") %></li>
+    <li> <%= poke.attack %></li>
+    <li> <%= poke.hit_point %></li>
+    <li> <%= poke.attack %></li>
+    <li> <%= poke.defense %></li>
+    <li> <%= poke.special_attack %></li>
+    <li> <%= poke.special_defense %></li>
+    <li> <%= poke.speed %></li>
+  </ul>
+<% end %>
